@@ -20,7 +20,7 @@ paths:
               application/json:
                 value:
                   id: "1234"
-                  type: "food"
+                  type: 1
                   price: 42
       responses:
         "200":
@@ -33,7 +33,7 @@ paths:
                 application/json:
                   value:
                     id: "1234"
-                    type: "food"
+                    type: 1
                     price: 42
     get:
       summary: List all products
@@ -52,7 +52,7 @@ paths:
                 application/json:
                   value:
                     - id: "1234"
-                      type: "food"
+                      type: 1
                       price: 42
                       # name: "pizza"
                       # version: "1.0.0"
@@ -84,7 +84,7 @@ paths:
                 application/json:
                   value:
                     id: "1234"
-                    type: "food"
+                    type: 1
                     price: 42
                     # name: "pizza"
                     # version: "1.0.0"
@@ -107,7 +107,9 @@ components:
         id:
           type: string
         type:
-          type: string
+          type: integer
+          enum: [1, 2, 3]
+          description: "Product type: 1=CREDIT_CARD, 2=PERSONAL_LOAN, 3=COMMERCIAL_LOAN"
         name:
           type: string
         version:
