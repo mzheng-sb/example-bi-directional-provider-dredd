@@ -16,6 +16,7 @@ This is a bi-directional contract testing provider example using PactFlow, Dredd
 **Broker Configuration:**
 - **Base URL**: https://smartbear.pactflow.io
 - **Pacticipant Name**: `pactflow-example-bi-directional-provider-dredd`
+- **BROKER Token**: ZVWY_jrj-Uyrc8LJp-FqmA
 - **Role**: Provider in bi-directional contract testing
 
 **Key Workflows:**
