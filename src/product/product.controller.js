@@ -5,7 +5,11 @@ const repository = new ProductRepository();
 
 exports.create = async (req, res) => {
     const data = req.body
-    const product = new Product(parseInt(data.id, 10), data.type, data.name, data.version, data.price)
+    const id = parseInt(data.id, 10);
+    if (isNaN(id)) {
+        return res.status(400).send({message: "invalid product"});
+    }
+    const product = new Product(id, data.type, data.name, data.version, data.price)
     product ? res.send(product) : res.status(400).send({message: "invalid product"})
 };
 exports.getAll = async (req, res) => {
