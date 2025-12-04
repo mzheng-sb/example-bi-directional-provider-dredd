@@ -10,19 +10,6 @@ This is a bi-directional contract testing provider example using PactFlow, Dredd
 - **API Specification**: `oas/products.yml` (OpenAPI 3.0)
 - **Testing Tool**: Dredd (validates API against OAS spec)
 
-## SmartBear MCP Server Configuration
-
-Please follow the guidelines below when working with the SmartBear MCP server for this project. how to get started is here: https://developer.smartbear.com/smartbear-mcp/docs/getting-started which includes setting up your local environment and connecting to the MCP server.
-
-An alertnative installation through docker is here: https://hub.docker.com/mcp/server/smartbear/overview
-
-The SmartBear MCP server is already configured with the following tools available:
-
-some of the environment variables you may need are:
-PACT_BROKER_BASE_URL: https://smartbear.pactflow.io
-PACT_BROKER_TOKEN: ZVWY_jrj-Uyrc8LJp-FqmA
-SWAGGER_API_KEY: d917a6d5-e242-4b21-af83-ffae28593362
-PACT_PROVIDER: pactflow-example-bi-directional-provider-dredd
 
 ### PactFlow / Contract Testing
 
@@ -47,6 +34,7 @@ PACT_PROVIDER: pactflow-example-bi-directional-provider-dredd
    - Always run can-i-deploy check: `npm run can-i-deploy`
    - Use `mcp_smartbear_contract-testing_can_i_deploy` to verify compatibility with consumers in production
    - Target environment: `production`
+   - please use configured coding agent Smartbear MCP tools to check if it's safe to deploy
 
 4. **After Deployment**
    - Record deployment to production environment
