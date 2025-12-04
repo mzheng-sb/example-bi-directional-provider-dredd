@@ -12,7 +12,11 @@ exports.getAll = async (req, res) => {
     res.send(await repository.fetchAll())
 };
 exports.getById = async (req, res) => {
-    const product = await repository.getById(parseInt(req.params.id, 10));
+    const id = parseInt(req.params.id, 10);
+    if (isNaN(id)) {
+        return res.status(400).send({message: "Invalid ID supplied"});
+    }
+    const product = await repository.getById(id);
     product ? res.send(product) : res.status(404).send({message: "Product not found"})
 };
 
