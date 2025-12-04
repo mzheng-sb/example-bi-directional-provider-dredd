@@ -19,7 +19,7 @@ paths:
             examples:
               application/json:
                 value:
-                  id: "1234"
+                  id: 1234
                   type: "food"
                   price: 42
       responses:
@@ -32,7 +32,7 @@ paths:
               examples:
                 application/json:
                   value:
-                    id: "1234"
+                    id: 1234
                     type: "food"
                     price: 42
     get:
@@ -51,7 +51,7 @@ paths:
               examples:
                 application/json:
                   value:
-                    - id: "1234"
+                    - id: 1234
                       type: "food"
                       price: 42
                       # name: "pizza"
@@ -70,7 +70,7 @@ paths:
         in: path
         description: ID of product to get
         schema:
-          type: string
+          type: integer
         required: true
         example: 10
       responses:
@@ -83,7 +83,7 @@ paths:
               examples:
                 application/json:
                   value:
-                    id: "1234"
+                    id: 1234
                     type: "food"
                     price: 42
                     # name: "pizza"
@@ -105,7 +105,7 @@ components:
         - price
       properties:
         id:
-          type: string
+          type: integer
         type:
           type: string
         name:
