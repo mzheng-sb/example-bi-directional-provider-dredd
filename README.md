@@ -11,6 +11,8 @@
 - [Example NodeJS Provider - Dredd](#example-nodejs-provider---dredd)
   - [Overview of Example](#overview-of-example)
     - [Key points](#key-points)
+  - [Quick Start](#quick-start)
+  - [Documentation](#documentation)
   - [Overview of Part of Bi-Directional Contract Testing Flow](#overview-of-part-of-bi-directional-contract-testing-flow)
   - [Compatibile with Consumers](#compatibile-with-consumers)
   - [Pre-requisites](#pre-requisites)
@@ -45,6 +47,45 @@ It:
 - Uses Dredd for API testing to check spec compliance
 
 What is uploaded to PactFlow is an OpenAPI specification that represents what you actually tested with Dredd, to give us confidence it is compatible with a Pact consumer.
+
+## Quick Start
+
+New to contract testing? Start here:
+
+📚 **[Quick Start Guide](docs/QUICKSTART.md)** - Get up and running in 5 minutes
+
+For comprehensive information:
+- 📖 **[Contract Testing Guide](docs/CONTRACT_TESTING.md)** - Complete guide to contract testing
+- 💡 **[Examples](examples/README.md)** - Practical examples and workflows
+- 🛠️ **[Verification Script](scripts/verify-contracts.sh)** - Automated contract testing workflow
+
+### Quick Commands
+
+```bash
+# Run contract tests
+npm test
+
+# Publish contract to PactFlow
+npm run publish
+
+# Check if safe to deploy
+npm run can-i-deploy
+
+# Complete workflow (automated)
+./scripts/verify-contracts.sh full
+```
+
+## Documentation
+
+This repository includes comprehensive contract testing documentation:
+
+| Document | Description |
+|----------|-------------|
+| **[Quick Start](docs/QUICKSTART.md)** | Get started with contract testing in 5 minutes |
+| **[Contract Testing Guide](docs/CONTRACT_TESTING.md)** | Complete guide covering architecture, workflows, and best practices |
+| **[Examples](examples/README.md)** | 15+ practical examples of contract testing scenarios |
+| **[Verification Script](scripts/verify-contracts.sh)** | Automated script for contract testing workflow |
+| **[Test Hooks](test/hooks.js)** | Dredd test hooks with examples and documentation |
 
 ## Overview of Part of Bi-Directional Contract Testing Flow
 
